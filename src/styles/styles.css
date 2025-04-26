@@ -1,0 +1,190 @@
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background-color: #0d1117;
+  color: #f0f6fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.6;
+}
+
+.app {
+  width: 95%;
+  max-width: 1000px;
+  margin: 2rem;
+  padding: 2rem;
+  background: linear-gradient(145deg, #161b22, #0d1117);
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.05);
+  box-sizing: border-box;
+}
+
+h2, h3 {
+  color: #58a6ff;
+  margin-bottom: 1rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.controls label {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.controls select {
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #161b22;
+  color: #f0f6fc;
+  border: 1px solid #30363d;
+}
+
+.incident-form {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background-color: #161b22;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #30363d;
+}
+
+.incident-form input,
+.incident-form textarea,
+.incident-form select {
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  background-color: #0d1117;
+  color: #f0f6fc;
+  font-size: 1rem;
+}
+
+.incident-form button {
+  padding: 0.75rem;
+  background: linear-gradient(90deg, #00ffff 0%, #007cf0 100%);
+  color: #0d1117;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.incident-form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px #00ffff70;
+}
+
+.incident-card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.incident-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+}
+
+.incident-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.incident-header h3 {
+  font-size: 1.1rem;
+  color: #58a6ff;
+  margin: 0;
+}
+
+.severity {
+  font-size: 0.8rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0 0.5rem;
+}
+
+.severity.low {
+  background-color: #2e8bff;
+  color: #fff;
+}
+
+.severity.medium {
+  background-color: #f39c12;
+  color: #0d1117;
+}
+
+.severity.high {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #58a6ff;
+  cursor: pointer;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.toggle-btn:hover {
+  color: #00ffff;
+}
+
+.description {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #c9d1d9;
+  border-top: 1px solid #30363d;
+  padding-top: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .incident-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .incident-header h3 {
+    font-size: 1rem;
+  }
+
+  .incident-form button {
+    width: 100%;
+  }
+
+  .toggle-btn {
+    width: 100%;
+    text-align: left;
+    margin-top: 1rem;
+    padding-left: 0;
+  }
+}
+  
