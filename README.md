@@ -1,54 +1,108 @@
-# React + TypeScript + Vite
+# AI Safety Incident Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 *Live Demo*: [https://mellifluous-sorbet-ff9f7b.netlify.app)  
 
-Currently, two official plugins are available:
+## 📋 Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The *AI Safety Incident Dashboard* is a web application designed to log and monitor AI safety incidents. It allows users to:
 
-## Expanding the ESLint configuration
+- View a list of reported AI safety incidents.
+- Filter incidents based on severity levels.
+- Sort incidents by the reported date.
+- View detailed descriptions of each incident.
+- Report new incidents through a user-friendly form.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This project aligns with HumanChain's mission to build a safer, more trustworthy, and human-centric digital world.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🛠 Tech Stack
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- *Language*: TypeScript
+- *Framework*: React
+- *Build Tool*: Vite
+- *Styling*: CSS (Flexbox/Grid)
+- *Deployment*: Netlify
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Features
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- *Incident Listing*: Displays a list of AI safety incidents with Title, Severity, and Reported Date.
+- *Filtering*: Filter incidents by severity levels: All, Low, Medium, High.
+- *Sorting*: Sort incidents by Reported Date: Newest First or Oldest First.
+- *View Details*: Toggle to view full descriptions of incidents.
+- *Report Incident*: Submit new incidents with Title, Description, and Severity.
+- *Responsive Design*: Ensures usability across various devices.
+- *Input Validation*: Basic validation to ensure non-empty fields during incident reporting.
+
+## 📦 Installation and Setup
+
+Follow these steps to run the project locally:
+
+1. *Clone the Repository*
+
+   bash
+   git clone https://github.com/devansh-02/ai-safety-dashboard.git
+   cd ai-safety-dashboard
+   
+
+2. *Install Dependencies*
+
+   Ensure you have [Node.js](https://nodejs.org/) installed. Then, install the project dependencies:
+
+   bash
+   npm install
+   
+
+3. *Run the Development Server*
+
+   Start the development server:
+
+   bash
+   npm run dev
+   
+
+   The application will be available at http://localhost:5173/ by default.
+
+4. *Build for Production*
+
+   To create an optimized production build:
+
+   bash
+   npm run build
+   
+
+## 📁 Project Structure
+
+
+ai-safety-dashboard/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── IncidentList.tsx
+│   │   ├── IncidentForm.tsx
+│   │   └── IncidentDetails.tsx
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
+
+
+## 🎨 Design Decisions
+
+- *State Management*: Utilized React's useState and useEffect hooks for local state management, considering the application's simplicity.
+- *Component Structure*: Broke down the UI into reusable components for better maintainability and readability.
+- *Styling*: Employed CSS Flexbox and Grid for responsive layouts, ensuring compatibility across devices.
+- *Form Validation*: Implemented basic validation to ensure that users provide necessary information when reporting incidents.
+
+## 🧠 Challenges Faced
+
+- *State Synchronization*: Ensuring that the incident list updates correctly upon adding new incidents required careful state management.
+- *Responsive Design*: Designing a layout that remains user-friendly across various screen sizes posed some challenges, which were addressed using CSS media queries and flexible layouts.
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+Feel free to contribute to this project by submitting issues or pull requests. Your feedback and contributions are welcome!
